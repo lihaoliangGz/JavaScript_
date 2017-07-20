@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js简介</title>
+    <script src="js/vendor/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+//            console.log("ad");
+//            document.write("<h1>这是一个标题aaaa HEAD</h1>");
+//            document.write("<p>这是一个段落asssss HEAD</p>");
+        });
+        document.write("<h1>这是一个标题 HEAD</h1>");
+        document.write("<p>这是一个段落  HEAD</p>");
+
+        function myButton() {
+            p=document.getElementById('body_p');
+            p.innerHTML = "修改了p标签的内容";
+        }
+
+    </script>
+
+</head>
+<body>
+
+<!--您只能在 HTML 输出中使用 document.write。如果您在文档加载后使用该方法，会覆盖整个文档。-->
+
+    <p id="body_p">the is a p</p>
+    <button type="button" onclick="alert('Hello World!')">button</button>
+    <button type="button" onclick="my">button2</button>
+    <script type="text/javascript">
+        document.write("<h1>这是一个标题</h1>");
+        document.write("<p>这是一个段落</p>");
+    </script>
+
+
+</body>
+</html>
