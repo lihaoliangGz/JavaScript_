@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bom window</title>
+</head>
+<body>
+
+<button type="button"onclick="open()">open</button>
+<br/>
+<button type="button"onclick="close()">close</button>
+<br/>
+<button type="button"onclick="moveTo()">moveTo</button>
+<br/>
+<button type="button"onclick="resize()">resize</button>
+<br/>
+
+
+
+
+<script>
+    //var w = window.innerWidth;
+    var w = document.documentElement.clientWidth;
+    //var w = document.body.clientWidth;
+    document.write(w);
+
+    //打开新窗口
+    function open() {
+        window.open();
+    }
+
+    //关闭当前窗口
+    function close() {
+        window.close();
+    }
+
+    //移动当前窗口
+    function moveTo() {
+        window.moveTo();
+    }
+
+    //调整当前窗口的尺寸
+    function resize() {
+        window.resizeTo(1200);
+    }
+</script>
+</body>
+</html>

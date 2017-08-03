@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js RegExp</title>
+</head>
+<body>
+<script>
+    var reg = new RegExp("l");
+    document.write(reg.test("Hello World"));//test() 方法检索字符串中的指定值。返回值是 true 或 false
+    document.write("<br/>");
+    document.write(reg.exec("Hello World"));//test() 方法检索字符串中的指定值。返回值是 true 或 false
+    document.write("<br/>");
+    document.write("<br/>");
+
+    var reg1 = new RegExp("l", "g");
+    do {
+        var result = reg1.exec("Hello World");
+
+        document.write(result+"<br/>");
+    }while (result!=null);
+
+</script>
+</body>
+</html>

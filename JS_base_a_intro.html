@@ -6,17 +6,49 @@
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-
+            //这是文档加载后
 //            console.log("ad");
 //            document.write("<h1>这是一个标题aaaa HEAD</h1>");
 //            document.write("<p>这是一个段落asssss HEAD</p>");
         });
+        //alert("aa");
         document.write("<h1>这是一个标题 HEAD</h1>");
         document.write("<p>这是一个段落  HEAD</p>");
 
+
+        //修改html内容
         function myButton() {
-            p=document.getElementById('body_p');
+            p = document.getElementById('body_p');
             p.innerHTML = "修改了p标签的内容";
+        }
+
+        //改变 HTML 图像
+        function imageChange() {
+            img = document.getElementById('my_img');
+            if (img.src.match(27)) {
+                img.src = 'img/28.jpg';
+            } else {
+                img.src = 'img/27.jpg';
+            }
+        }
+
+        //改变 HTML 元素的样式
+        function styleChange() {
+            var p = document.getElementById('style_change');
+
+            if ((p.style.color) == 'red') {
+                p.style.color = 'green';
+            } else {
+                p.style.color = 'red';
+            }
+        }
+
+        function verify() {
+            var x = document.getElementById('demo').value;
+            console.log(x);
+            if (x == "" || isNaN(x)) {
+                alert("不是数字");
+            }
         }
 
     </script>
@@ -26,10 +58,29 @@
 
 <!--您只能在 HTML 输出中使用 document.write。如果您在文档加载后使用该方法，会覆盖整个文档。-->
 
-    <p id="body_p">the is a p</p>
-    <button type="button" onclick="alert('Hello World!')">button</button>
-    <button type="button" onclick="my">button2</button>
+<button type="button" onclick="alert('Hello World!')">button</button>
+<br/><br/>
+<p id="body_p">the is a p</p>
+<button type="button" onclick="myButton()">修改html内容</button>
+<br/><br/>
+
+<a href="javascript:"><img id="my_img" src="img/27.jpg" onclick="imageChange()"/>
+<br/><br/>
+
+<p id="style_change">JavaScript 能改变 HTML 元素的样式。</p>
+<button type="button" onclick="styleChange()">变HTML样式</button>
+
+<br/>
+
+
+<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+<br/>
+<input type="text" id="demo"/>
+<button type="button" onclick="verify()">点击</button>
+    <br/>
+
     <script type="text/javascript">
+        //alert("bb");
         document.write("<h1>这是一个标题</h1>");
         document.write("<p>这是一个段落</p>");
     </script>

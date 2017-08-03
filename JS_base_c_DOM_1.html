@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML DOM HTML CSS</title>
+</head>
+<body>
+<p id="p_id">Hello World!!</p>
+<ul>
+    <li>列表1</li>
+    <li>列表2</li>
+    <li>列表3</li>
+</ul>
+
+<ol class="ol_class">
+    <li>列表1</li>
+    <li>列表2</li>
+    <li>列表3</li>
+
+</ol>
+
+<p id="p2_id">修改HTML元素样式</p>
+
+
+
+<div style="margin-bottom: 20px;">
+<button type="button" onclick="document.getElementById('p2_id').style.color='red'">button</button>
+    &nbsp;
+<button type="button" onclick="document.getElementById('p2_id').style.visibility='hidden'">隐藏</button>
+    &nbsp;
+<button type="button" onclick="document.getElementById('p2_id').style.visibility='visible'">显示</button>
+</div>
+<img src="img/27.jpg" id="img_id"/>
+
+
+
+</body>
+
+<script>
+    //通过ID找html元素
+    var p=document.getElementById('p_id');
+    p.innerHTML = "Hello World"; //改变HTML内容
+    console.log(p.innerHTML);
+
+    //通过标签名找html元素
+    var ul=document.getElementsByTagName('ul');
+    console.log(ul);
+
+    //通过类名找html元素
+    var ol=document.getElementsByClassName('ol_class');
+    console.log(ol);
+
+    //改变HTML属性
+    var img=document.getElementById('img_id');
+    img.src = 'img/28.jpg';
+
+    //修改html元素样式
+    var p2 = document.getElementById('p2_id');
+    p2.style.color = 'green';
+
+    //隐藏显示:
+
+</script>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML DOM 事件 节点</title>
+</head>
+
+<!--onload 事件可用于检测访问者的浏览器类型和浏览器版本，并基于这些信息来加载网页的正确版本-->
+<body onload="checkCookies()">
+<!--注意this的用法-->
+<!--点击事件-->
+<p onclick="this.innerHTML='谢谢'">请点击该文本</p>
+<!--调用函数 使用HTML元素分配 onclick 事件-->
+<h1 onclick="changeText(this)">点击我吧</h1>
+<h2 id="h2_id">你点我啊</h2>
+
+<!--onchange 事件常结合对输入字段的验证来使用。-->
+<input type="text" onchange="onChange(this)" placeholder="输入内容会执行函数..."/>
+
+<!--鼠标移至 HTML 元素上方或移出元素时触发函数-->
+<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" style="width: 120px;height: 60px; background-color: green;
+text-align: center;margin: 38px;line-height: 60px;color: #fff;">请移步这里</div>
+
+<!--当点击鼠标按钮时，会触发 onmousedown 事件，当释放鼠标按钮时，会触发 onmouseup 事件，最后，当完成鼠标点击时，会触发 onclick 事件。-->
+<div onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" onclick="mouseClick(this)" style="width: 120px;height: 60px; background-color: green;
+text-align: center;margin: 38px;line-height: 60px;color: #fff;">鼠标的点击事件</div>
+
+<!--当输入框获得焦点-->
+<input type="text" onfocus="onFocus(this)" placeholder="当输入框获得焦点.."/>
+
+</body>
+
+<script>
+
+    function changeText(id) {
+        id.innerHTML = "Thank You";
+    }
+
+    //使用 HTML DOM 向HTML元素分配事件
+    document.getElementById('h2_id').onclick=function () {
+        alert("使用HTML DOM 分配事件");
+    };
+
+    function checkCookies(){
+        if (navigator.cookieEnabled) {
+            console.log("已启用cookie");
+        }else {
+            console.log('cookie未启用');
+        }
+    }
+
+    function onChange(obj) {
+        obj.value=obj.value.toUpperCase();
+    }
+
+    //当鼠标移上来
+    function mouseOver(obj) {
+        obj.innerHTML="谢谢";
+    }
+
+    //当鼠标移开
+    function mouseOut(obj) {
+        obj.innerHTML = "请移步这里";
+    }
+
+    //
+    function mouseDown(obj) {
+        obj.style.backgroundColor="#fff";
+        console.log("鼠标点下");
+    }
+
+    function mouseUp(obj) {
+        obj.style.backgroundColor="green";
+        console.log("鼠标释放");
+    }
+
+    function mouseClick(obj) {
+        console.log("触发onclick事件");
+    }
+
+    //当输入框获得焦点
+    function onFocus(obj) {
+        obj.style.backgroundColor = 'green';
+    }
+
+</script>
+</html>

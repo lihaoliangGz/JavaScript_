@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js array</title>
+</head>
+<body>
+
+<script>
+    var array = new Array();
+    array[0]='a';
+    array[1]='b';
+    array[2]='c';
+    document.write(array);
+    document.write("<br/>");
+    //array.prototype.name = "Hello World";
+    //document.write(array.name);
+    for (x in array) {
+        document.write(array[x]+"<br/>");
+    }
+
+    var array2 = new Array();
+    array2[0] = "e";
+    array2[1] = "f";
+    var arConcat=array.concat(array2);
+    document.write(arConcat);
+    document.write("<br/>");
+    document.write(array.join("/"));
+
+
+    //错误:
+//    var array1;
+//    array1[0] = 'e';
+//    array1[1] = 'f';
+//    array1[2] = 'g';
+//    document.write(array1);
+
+</script>
+
+</body>
+</html>

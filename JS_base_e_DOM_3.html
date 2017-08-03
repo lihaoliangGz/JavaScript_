@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 节点</title>
+</head>
+<body>
+<div id="div1">
+    <p id="p1">段落一</p>
+    <p>另一个段落</p>
+</div>
+
+<div>
+    <button type="button" onclick="addElement()">添加元素</button>
+    <br/>
+    <br/>
+    <button type="button" onclick="cancelElement()">删除元素</button>
+    <br/>
+    <br/>
+    <button type="button" onclick="cancelElement_1()">删除元素的另一方式</button>
+</div>
+
+<script>
+    //添加元素
+    function addElement() {
+        var div=document.getElementById('div1');
+        var p=document.createElement('p');
+        // p.innerHTML="这是新段落";
+        var node=document.createTextNode("这是新段落");
+        p.appendChild(node);
+        div.appendChild(p);
+    }
+
+    //删除元素
+    function cancelElement() {
+        var div = document.getElementById('div1');
+        var p = document.getElementById('p1');
+        div.removeChild(p);
+    }
+
+    //删除元素的另一方式
+    function cancelElement_1() {
+        var p=document.getElementById('p1');
+        p.parentNode.removeChild(p);
+    }
+
+</script>
+</body>
+</html>

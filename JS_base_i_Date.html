@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js date</title>
+</head>
+<body>
+<script>
+    var myDate = new Date();
+    document.write(Date());
+    document.write("<br/>");
+    document.write((new Date()).getTime());
+    document.write("<br/>");
+    document.write((new Date()).setFullYear(1986,06,14));
+    document.write("<br/>");
+    document.write((new Date()).toUTCString());
+    document.write("<br/>");
+    var weekday=new Array(7)
+    weekday[0]="星期日"
+    weekday[1]="星期一"
+    weekday[2]="星期二"
+    weekday[3]="星期三"
+    weekday[4]="星期四"
+    weekday[5]="星期五"
+    weekday[6]="星期六"
+    document.write(new Date().getDay());
+    document.write("<br/>");
+    document.write("今天是" + weekday[new Date().getDay()]);
+    document.write("<br/>");
+    document.write(myDate.setDate(myDate.getDate()+5));
+
+
+</script>
+</body>
+</html>

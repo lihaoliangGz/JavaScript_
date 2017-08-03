@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bom history</title>
+</head>
+<body>
+
+<button type="button" onclick="back()">返回</button>
+<br/>
+<br/>
+<button type="button" onclick="forward()">向前</button>
+
+
+
+<script>
+
+    //与在浏览器点击后退按钮相同
+    function back() {
+        history.back()
+    }
+
+    //与在浏览器中点击按钮向前相同
+    function forward() {
+        history.forward();
+    }
+
+</script>
+</body>
+</html>

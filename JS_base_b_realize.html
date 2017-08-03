@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js实现</title>
+</head>
+<body>
+
+<p >p0</p>
+<p id="p1" onclick="abd()">p1</p>
+<p class="p2">p2</p>
+<input type="text" value="aaa" id="input"/>
+
+
+
+<script>
+    document.write("Hello  World");
+    //对代码进行折行
+    document.write("Hello \
+        World");
+
+    var array=new Array();
+    var array1=["a",1,4,2,["b",2]];
+    var length=array1.length;
+    console.log(array);
+    console.log(array1);
+    console.log(length);
+    var x=array1[4][0];
+    console.log(x);
+    y=array1.sort();//排序
+    a=array1.toString();
+    console.log(y);
+    console.log(a);
+    b=array1.pop();
+    console.log(b);
+    console.log(array1);
+    var c=array1.push(99);
+    console.log(c);
+    console.log(array1);
+    var d=array1.shift();
+    console.log(d);
+    console.log(array1);
+    var f=array1.unshift(100);
+    console.log(f);
+    console.log(array1);
+    var g=100;
+    console.log(add(100,200));
+    function  add(a,b) {
+        return  arguments[0]+arguments[1];
+    }
+
+    document.getElementById('p1').innerHTML="p111111111111";
+    document.getElementsByTagName('p');
+    document.getElementsByClassName('p2');
+    //window.alert("nihao");
+    //window.confirm("确定");
+    //window.prompt("prompt");
+
+    function Person(name,age) {
+        this.name=name;
+        this.age=age;
+        this.eat=function (food) {
+            console.log("小狗在吃" + food);
+        }
+    }
+
+    var o = new Person("小米", 18);
+    console.log(o.name);
+    console.log(o.age);
+    console.log(o.eat("骨头"));
+    var object = new Object();
+    object.name = "华为";
+    object.age=18;
+    console.log(object);
+
+    var obj = {
+        "name":"zs",
+        "age":30,
+        "aihao":["c","h","w"],
+        "school":{"name":"tarena", "loc":"BJ"},
+        "speakSelf" : function(){
+            alert("aaaaa");
+        }
+    };
+    console.log(obj.name);
+    console.log(obj.aihao[2]);
+    console.log(obj.school.loc);
+    obj.speakSelf();
+
+    var person={
+        firstname : "Bill",
+        lastname  : "Gates",
+        id        :  5566
+    };
+
+    name=person.lastname;
+    console.log(name);
+    name=person["lastname"];
+    console.log(name);
+
+    var string = new String("agasdg");
+    //console.log(string);
+    function  test() {
+        car = "bmw";
+    }
+    console.log(car);
+
+</script>
+<script>
+  function abd() {
+      try {
+          addd();
+      }catch (e){
+          alert("catch捕捉到错误"+e.toString());
+      }
+  }
+
+</script>
+</body>
+</html>

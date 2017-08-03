@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<script>
+    var num=123e5;
+    console.log(num);
+
+
+    console.log(Number.MAX_VALUE);
+    console.log(Number.MIN_VALUE);
+    console.log(Number.NaN);
+    console.log(Number.NEGATIVE_INFINITY);
+    console.log(Number.POSITIVE_INFINITY);
+    console.log(Number.constructor);
+
+
+    var number= new Number(1200);
+    var con=number.constructor;
+    console.log(con);
+
+    var toString = number.toString(16);//把数字转换为字符串,指定为16进制
+    console.log(toString);
+    var toLoacl = number.toString();//
+    console.log(toLoacl);
+    var toFixed = number.toFixed(2);//把数字转换为字符串，结果的小数点后有指定位数的数字
+    console.log(toFixed);
+    var toE = number.toExponential();
+    console.log(toE);//把对象的值转换为指数计数法。
+    var toP=number.toPrecision(1);//
+    console.log(toP);
+    var valueOf=number.valueOf();
+    console.log(valueOf);
+    var n=123;
+    console.log(n.toString(2));
+
+
+</script>
+
+</body>
+<head>
+    <meta charset="UTF-8">
+    <title>js数字</title>
+</head>
+</html>
