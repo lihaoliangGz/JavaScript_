@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> js 消息框</title>
+</head>
+<body>
+<input type="button" onclick="showAlert()" value="警告框"/>
+<br/>
+<br/>
+<input type="button" onclick="showConfirm()" value="确定框"/>
+<br/>
+<br/>
+<input type="button" onclick="showPrompt()" value="提示框"/>
+
+
+
+
+
+
+<script>
+
+    function showAlert(){
+        alert("警告框");
+    }
+
+    function showConfirm() {
+        var result=confirm("确定取消框");
+        if (result) {
+            alert("你点击了确定");
+        }else {
+            alert("你点击了取消");
+        }
+    }
+
+    function  showPrompt() {
+        var result=prompt("请输入内容","Hello World");
+        result=result.trim();
+        if (result!=""||result!=null) {
+            document.write(result);
+        }
+    }
+</script>
+</body>
+
+</html>

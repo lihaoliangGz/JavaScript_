@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js timing</title>
+</head>
+<body onload="startTime()">
+<button type="button" onclick="timeMsg()">超时定时器</button>
+<button type="button" onclick="stopTime()">stop</button>
+<br/><br/><br/>
+
+<button type="button" onclick="timeInterval()">周期定时器</button>
+<button type="button" onclick="stopInt()">stop</button>
+<br/>
+<h2 id="h2_id"></h2>
+<br/><br/><br/>
+
+<span id="span_id">当前时间:</span>
+
+<script>
+
+
+    //超时定时器
+    var t;
+    function timeMsg() {
+        t = setTimeout(function () {
+            alert("3秒");
+        }, 3000);
+    }
+
+    function stopTime() {
+        clearTimeout(t);
+    }
+
+    //周期定时器
+    var i;
+    function timeInterval() {
+        j = 1;
+        var h2 = document.getElementById('h2_id');
+        i = setInterval(function () {
+            h2.innerHTML = j;
+            j++;
+        }, 1000);
+    }
+
+    function stopInt() {
+        clearInterval(i);
+    }
+
+
+    var span = document.getElementById('span_id');
+    //js时钟
+    function startTime() {
+        var today = new Date()
+        var h = today.getHours()
+        var m = today.getMinutes()
+        var s = today.getSeconds()
+        // add a zero in front of numbers<10
+        m = checkTime(m)
+        s = checkTime(s)
+        span.innerHTML = "当前时间："+h + ":" + m + ":" + s
+        t = setTimeout('startTime()', 500);
+    }
+
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i
+        }
+        return i
+    }
+
+</script>
+
+</body>
+</html>
